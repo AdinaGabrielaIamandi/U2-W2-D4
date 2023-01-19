@@ -1,5 +1,5 @@
 @import "./partials/reset";
-@import "./partials/colors";
+@import "./partials/variables";
 @import "./partials/buttons";
 
 @function em($pixels) {
@@ -15,54 +15,108 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
-nav {
-  background-color: $blizzard-blue;
-  @include d-flex;
+header {
   position: sticky;
   top: 0;
-  border-bottom: $border $true-blue;
-  select {
-    padding: em(8px);
-    background-color: $middle-blue-green;
-    border: $border $true-blue;
-    @media screen and (min-width: 480px) {
-      display: none;
-    }
-  }
-  ul {
-    list-style-type: none;
+  z-index: 999;
+  nav {
+    background-color: $blizzard-blue;
     @include d-flex;
-    @media screen and (max-width: 480px) {
-      display: none;
-    }
-    li {
-      a {
-        text-decoration: none;
-        color: black;
-      }
+    border-bottom: $border $true-blue;
+    select {
+      padding: em(8px);
+      background-color: $middle-blue-green;
+      border: $border $true-blue;
       @media screen and (min-width: 480px) {
-        @include d-flex;
-        padding: em(8px) em(16px);
-        border-right: $border $true-blue;
+        display: none;
       }
     }
-  }
-  img {
-    width: 100px;
-    height: 100px;
+    ul {
+      list-style-type: none;
+      @include d-flex;
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
+      li {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        @media screen and (min-width: 480px) {
+          @include d-flex;
+          padding: em(8px) em(16px);
+          border-right: $border $true-blue;
+        }
+      }
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
   }
 }
-
 main {
-  background-color: $blizzard-blue;
+  margin-top: em(32px);
+  padding: em(32px);
   article {
+    background-color: $blizzard-blue;
     padding: em(32px);
+    border-bottom: $border $true-blue;
     @media screen and (min-width: 768px) {
-      padding: em(58px);
       font-size: em(20px);
       width: 70%;
       margin: auto;
     }
+    h1 {
+      font-size: em(32px);
+    }
+  }
+}
+
+main {
+  section {
+    .card {
+      box-shadow: 6px 7px 24px 3px $true-blue;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.04);
+        box-shadow: none;
+      }
+      @media screen and (min-width: 768px) {
+        margin: em(32px);
+      }
+      margin-top: em(16px);
+      border: $border $true-blue;
+      img {
+        width: 100%;
+        @media screen and (min-width: 768px) {
+          width: 50%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        @include d-flex;
+      }
+      div {
+        padding: em(32px);
+      }
+    }
+  }
+}
+
+footer {
+  @include d-flex;
+  line-height: em(10px);
+  text-align: center;
+  padding: em(16px);
+  font-size: em(20px);
+  background-color: $blizzard-blue;
+  border-top: $border $true-blue;
+  img {
+    width: 30px;
+    padding-left: em(16px);
+    padding-right: em(16px);
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
   }
 }

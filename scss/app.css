@@ -8,47 +8,54 @@ body {
   min-width: 280px;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Sofia Sans Condensed", sans-serif;
 }
 
-nav {
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+header nav {
   background-color: #aeecef;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   border-bottom: 1px solid #3066be;
 }
-nav select {
+header nav select {
   padding: 0.5em;
   background-color: #80ded9;
   border: 1px solid #3066be;
 }
 @media screen and (min-width: 480px) {
-  nav select {
+  header nav select {
     display: none;
   }
 }
-nav ul {
+header nav ul {
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 @media screen and (max-width: 480px) {
-  nav ul {
+  header nav ul {
     display: none;
   }
 }
-nav ul li a {
+header nav ul li a {
   text-decoration: none;
   color: black;
 }
 @media screen and (min-width: 480px) {
-  nav ul li {
+  header nav ul li {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -56,22 +63,83 @@ nav ul li a {
     border-right: 1px solid #3066be;
   }
 }
-nav img {
+header nav img {
   width: 100px;
   height: 100px;
 }
 
 main {
-  background-color: #aeecef;
+  margin-top: 2em;
+  padding: 2em;
 }
 main article {
+  background-color: #aeecef;
   padding: 2em;
+  border-bottom: 1px solid #3066be;
 }
 @media screen and (min-width: 768px) {
   main article {
-    padding: 3.625em;
     font-size: 1.25em;
     width: 70%;
     margin: auto;
+  }
+}
+main article h1 {
+  font-size: 2em;
+}
+
+main section .card {
+  box-shadow: 6px 7px 24px 3px #3066be;
+  margin-top: 1em;
+  border: 1px solid #3066be;
+}
+main section .card:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  box-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  main section .card {
+    margin: 2em;
+  }
+}
+main section .card img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  main section .card img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+main section .card div {
+  padding: 2em;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  line-height: 0.625em;
+  text-align: center;
+  padding: 1em;
+  font-size: 1.25em;
+  background-color: #aeecef;
+  border-top: 1px solid #3066be;
+}
+footer img {
+  width: 30px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: block;
   }
 }/*# sourceMappingURL=app.css.map */
