@@ -1,3 +1,55 @@
 @import "./partials/reset";
 @import "./partials/colors";
 @import "./partials/buttons";
+
+@function em($pixels) {
+  @return calc($pixels/16px) * 1em;
+}
+
+body {
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+@mixin d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav {
+  background-color: $blizzard-blue;
+  @include d-flex;
+  position: sticky;
+  top: 0;
+  border-bottom: $border $true-blue;
+  select {
+    padding: em(8px);
+    background-color: $middle-blue-green;
+    border: $border $true-blue;
+    @media screen and (min-width: 480px) {
+      display: none;
+    }
+  }
+  ul {
+    list-style-type: none;
+    @include d-flex;
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
+    li {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      @media screen and (min-width: 480px) {
+        @include d-flex;
+        padding: 0.5em 1em;
+        border-right: $border $true-blue;
+      }
+    }
+  }
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}

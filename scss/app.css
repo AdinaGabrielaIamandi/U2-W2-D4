@@ -5,4 +5,58 @@ html {
 body {
   margin: 0;
   height: 100%;
+  min-width: 280px;
+}
+
+body {
+  font-family: "Sofia Sans Condensed", sans-serif;
+}
+
+nav {
+  background-color: #aeecef;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #3066be;
+}
+nav select {
+  padding: 0.5em;
+  background-color: #80ded9;
+  border: 1px solid #3066be;
+}
+@media screen and (min-width: 480px) {
+  nav select {
+    display: none;
+  }
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 480px) {
+  nav ul {
+    display: none;
+  }
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+@media screen and (min-width: 480px) {
+  nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5em 1em;
+    border-right: 1px solid #3066be;
+  }
+}
+nav img {
+  width: 100px;
+  height: 100px;
 }/*# sourceMappingURL=app.css.map */
