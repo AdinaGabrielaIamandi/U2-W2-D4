@@ -43,7 +43,7 @@ nav {
       }
       @media screen and (min-width: 480px) {
         @include d-flex;
-        padding: 0.5em 1em;
+        padding: em(8px) em(16px);
         border-right: $border $true-blue;
       }
     }
@@ -51,5 +51,18 @@ nav {
   img {
     width: 100px;
     height: 100px;
+  }
+}
+
+main {
+  background-color: $blizzard-blue;
+  article {
+    padding: em(32px);
+    @media screen and (min-width: 768px) {
+      padding: em(58px);
+      font-size: em(20px);
+      width: 70%;
+      margin: auto;
+    }
   }
 }

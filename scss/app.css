@@ -59,4 +59,19 @@ nav ul li a {
 nav img {
   width: 100px;
   height: 100px;
+}
+
+main {
+  background-color: #aeecef;
+}
+main article {
+  padding: 2em;
+}
+@media screen and (min-width: 768px) {
+  main article {
+    padding: 3.625em;
+    font-size: 1.25em;
+    width: 70%;
+    margin: auto;
+  }
 }/*# sourceMappingURL=app.css.map */
