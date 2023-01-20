@@ -123,10 +123,6 @@ main section .card div {
 }
 
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  line-height: 0.625em;
   text-align: center;
   padding: 1em;
   font-size: 1.25em;
@@ -140,6 +136,8 @@ footer img {
 }
 @media screen and (min-width: 768px) {
   footer {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }/*# sourceMappingURL=app.css.map */
